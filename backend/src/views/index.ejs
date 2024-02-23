@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homepage</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+   
+        <div class="container">
+        <% for (let i=0; i < albums.length; i++) { %>
+            <a class="card-link" href="/<%=albums[i].name%>">
+                <div class="card">
+                    <img class="cover" src="<%=albums[i].cover_path%>" alt="">
+                </div>
+            </a>
+            <% } %>
+        </div>
+
+    
+</body>
+
+</html>

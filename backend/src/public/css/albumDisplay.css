@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --cover-size: 90vw;
+    --code-width: calc(var(--cover-size) * .4);
+    --bg-color: #ffffff;
+    --secondary-color: #000000;
+    --terciary-color: #646464;
+    --max-width: 80vh;
+    --max-width-name: calc(calc(var(--max-width) / 5 * 3));
+    --max-width-code: calc(calc(var(--max-width) / 5 * 2));
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    font-family: "Arimo", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: var(--bg-color);
+    margin: 0;
+}
+
+.frame {
+    width: var(--cover-size);
+    max-width: var(--max-width);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+}
+
+.album-date,
+.album-time {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    width: 50%;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+.album-time {
+    text-align: right;
+}
+
+.img-wrapper {
+    width: var(--cover-size);
+    max-width: var(--max-width);
+    height: var(--cover-size);
+    max-height: var(--max-width);
+    background-color: rgb(218, 218, 218);
+    margin: 5px 0 5px 0;
+}
+
+#album-cover {
+    width: var(--cover-size);
+    height: var(--cover-size);
+    max-width: var(--max-width);
+    max-height: var(--max-width);
+    border-radius: 5px;
+}
+
+.bottom-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.album-info {
+    width: calc(var(--cover-size) - var(--code-width));
+    max-width: var(--max-width-name);
+}
+
+.album-title,
+.artist-name {
+    width: 100%;
+    font-weight: bold;
+}
+
+.album-title {
+    font-size: 25px;
+    color: var(--secondary-color);
+}
+
+.artist-name {
+    color: var(--terciary-color);
+}
+
+.code-wrapper,
+#spotify-code {
+    width: var(--code-width);
+    height: calc(var(--code-width) / 4);
+    max-width: var(--max-width-code);
+    max-height: calc(var(--max-width-code) / 4);
+}
+
+.button-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+}
+
+#btn-wrapper {
+    margin-top: 20px;
+    margin-right: 20px;
+    fill: var(--secondary-color);
+}
+
+@media screen and (min-width: 838px) {
+
+    .album-date,
+    .album-time,
+    .artist-name {
+        font-size: calc(calc(var(--max-width) / 100) * 2.1);
+    }
+
+    .album-title {
+        font-size: calc(calc(var(--max-width) / 100) * 3.75);
+    }
+
+}
+
+@media screen and (max-width: 838px) {
+
+    .album-date,
+    .album-time,
+    .artist-name {
+        font-size: 2.1vw;
+    }
+
+    .album-title {
+        font-size: 3.75vw;
+    }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album Display</title>
+    <link rel="stylesheet" href="./css/albumDisplay.css">
+    <script src="./js/albumDisplay.js"></script>
+</head>
+
+<body>
+    <div class="frame">
+        <div class="header">
+            <div class="album-date">
+                <%=album.date%>
+            </div>
+            <div class="album-time">
+                <%=album.time%>
+            </div>
+        </div>
+        <div class="img-wrapper">
+            <img id="album-cover" src="<%=album.cover_path%>" alt="" class="album-cover">
+        </div>
+        <div class="bottom-container">
+            <div class="album-info">
+                <div class="album-title">
+                    <%=album.name%>
+                </div>
+                <div class="artist-name">
+                    <%=album.artist%>
+                </div>
+            </div>
+            <div class="code-wrapper">
+                <%-album.code%>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
